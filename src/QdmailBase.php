@@ -1,7 +1,8 @@
 <?php
 namespace Qd;
 
-class QdmailBase extends QdmailBranch{
+class QdmailBase extends QdmailBranch
+{
 
 	//----------------------------
 	// Default Language
@@ -3589,11 +3590,15 @@ EOF;
 		if( isset( $this->smtp_object ) && is_object( $this->smtp_object ) ){
 			return $this->smtp_object;
 		}
-		if( !class_exists ( 'Qdsmtp' ) && file_exists( 'qdsmtp.php' ) ){
-			require_once( 'qdsmtp.php' );
-		}elseif( !class_exists ( 'Qdsmtp' ) && !file_exists( 'qdsmtp.php' )){
-			return $this->errorGather('Plese load SMTP Program - Qdsmtp http://hal456.net/qdsmtp',__LINE__);
-		}
+
+        // Autoloaderへの変更によりコメントアウト
+
+		// if( !class_exists ( 'Qdsmtp' ) && file_exists( 'qdsmtp.php' ) ){
+		// 	require_once( 'qdsmtp.php' );
+		// }elseif( !class_exists ( 'Qdsmtp' ) && !file_exists( 'qdsmtp.php' )){
+		// 	return $this->errorGather('Plese load SMTP Program - Qdsmtp http://hal456.net/qdsmtp',__LINE__);
+		// }
+
 		$this->smtp_object = new Qdsmtp();
 		return $this->smtp_object;
 	}

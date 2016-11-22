@@ -1,7 +1,8 @@
 <?php
 namespace Qd;
 
-class sfQdmail extends QdmailUserFunc{
+class sfQdmail extends QdmailUserFunc
+{
 
 	var $framework = 'Symfony';
 

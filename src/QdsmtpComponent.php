@@ -9,7 +9,7 @@ class QdsmtpComponent extends QdsmtpBase{
 	var $template	= 'default';
 	var $view		= null;
 
-	function __constructor( $param = null )
+	function __construct( $param = null )
     {
 		if( !is_null($param)){
 			$param = func_get_args();

@@ -1,7 +1,8 @@
 <?php
 namespace Qd;
 
-class QdsmtpError extends QdsmtpBranch{
+class QdsmtpError extends QdsmtpBranch
+{
 
 	var $name = 'QdsmtpError';
 	var $error_display		= true;

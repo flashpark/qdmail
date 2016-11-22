@@ -1,7 +1,8 @@
 <?php
 namespace Qd;
 
-class QdsmtpBase extends QdsmtpError{
+class QdsmtpBase extends QdsmtpError
+{
 
 	var $name		= 'QdSmtp';
 	var $smtpLFC	="\r\n";
@@ -41,7 +42,7 @@ class QdsmtpBase extends QdsmtpError{
 	var $time_out			= 3 ;
 	var $always_notify_success = false;
 
-	function __constructor( $param = null ){
+	function __construct( $param = null ){
 		if( !is_null( $param[0] ) && is_bool( $param[0] ) ){
 			$this->continue = $continue;
 		}

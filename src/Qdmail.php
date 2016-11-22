@@ -26,20 +26,6 @@ if (!defined('QD_DS')) {
 	define('QD_DS', DIRECTORY_SEPARATOR);
 }
 
-//-------------------------------------------
-// For CakePHP , extended 'Object' Class ,
-// if including in CakePHP Component .
-// At normal PHP Script or another Framework ,
-// 'QdmailBranch' means Dummy Base Class .
-//-------------------------------------------
-// if ( defined('CAKE_CORE_INCLUDE_PATH') || defined('CAKE')) {
-// 	class QdmailBranch extends Object{
-// 	}
-// }else{
-// 	class QdmailBranch{
-// 	}
-// }
-
 if( !function_exists( 'qd_send_mail' ) ){
 
 	function qd_send_mail( $type , $to = null, $subject = null , $content = null , $other_header = array() , $attach = null, $debug = 0 ){
@@ -83,14 +69,15 @@ if( !function_exists( 'qd_send_mail' ) ){
 	}
 }
 
-class Qdmail extends QdmailUserFunc{
-
+class Qdmail extends QdmailUserFunc
+{
 	var $name ='Qdmail';
 
-	function __constructor( $param = null ){
-		if( !is_null($param)){
+	function __construct( $param = null )
+    {
+		if( !is_null($param)):
 			$param = func_get_args();
-		}
+		endif;
 		parent::__construct( $param );
 	}
 }
