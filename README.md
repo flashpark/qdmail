@@ -1,6 +1,6 @@
 # Qdmail
 
-Qdmail forked from spok
+Qdmail forked from spok [Qdmail](http://hal456.net/qdmail/)
 
 
 ## Install
