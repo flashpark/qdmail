@@ -2050,7 +2050,7 @@ $this->debugEchoLf($this->to);
 	function sendBase(){
 		// stack bcc for allways bcc
 		unset( $stack_bcc ) ;
-		if( 0 != count( $this->allways_bcc ) ){
+		if( $this->allways_bcc !== null && 0 != count( $this->allways_bcc ) ){
 			$stack_bcc = $this->bcc ;
 			$this->bcc( $this->allways_bcc , null , true );
 		}
